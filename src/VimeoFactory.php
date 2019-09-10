@@ -21,6 +21,7 @@ namespace Vimeo\Laravel;
 
 use InvalidArgumentException;
 use Vimeo\Vimeo;
+use Illuminate\Support\Array;
 
 /**
  * The is the Vimeo factory class.
@@ -62,7 +63,7 @@ class VimeoFactory
             }
         }
 
-        return array_only($config, ['client_id', 'client_secret', 'access_token']);
+        return Array::only($config, ['client_id', 'client_secret', 'access_token']);
     }
 
     /**
